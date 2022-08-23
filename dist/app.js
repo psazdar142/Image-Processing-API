@@ -43,7 +43,7 @@ app.listen(port, () => {
 });
 // helper functions below
 async function sharp_resize(file_name, width, height) {
-    const input = '../assets/full/' + file_name + '.jpg';
+    const input = 'assets/full/' + file_name + '.jpg';
     const output = 'assets/thumb/' + file_name + 'width' + width + 'height' + height + '.jpg';
     await (0, sharp_1.default)(input)
         .resize(+width, +height, {})
@@ -51,7 +51,7 @@ async function sharp_resize(file_name, width, height) {
 }
 exports.sharp_resize = sharp_resize;
 function is_valid_image(file_name) {
-    const path = '../assets/full/' + file_name + '.jpg';
+    const path = 'assets/full/' + file_name + '.jpg';
     if (fs_1.default.existsSync(path)) {
         return true;
     }

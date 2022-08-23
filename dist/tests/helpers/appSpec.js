@@ -46,9 +46,9 @@ describe('Endpoint Testing', () => {
     //   });
     // });
 });
-describe("Verifying resized image", () => {
-    it("should resize image", async () => {
-        await (0, app_2.sharp_resize)("tunnel_pic", "550", "550"); // generates testing file
+describe('Verifying resized image', () => {
+    it('should resize image', async () => {
+        await (0, app_2.sharp_resize)('tunnel_pic', '550', '550'); // generates testing file
         const path = 'assets/thumb/tunnel_picwidth550height550.jpg';
         let is_resized = false;
         if (fs_1.default.existsSync(path)) {
