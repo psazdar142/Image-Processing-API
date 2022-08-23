@@ -48,7 +48,7 @@ export async function sharp_resize(
   width: string,
   height: string
 ): Promise<void> {
-  const input: string = '../assets/full/' + file_name + '.jpg';
+  const input: string = 'assets/full/' + file_name + '.jpg';
   const output: string =
     'assets/thumb/' + file_name + 'width' + width + 'height' + height + '.jpg';
 
@@ -58,7 +58,7 @@ export async function sharp_resize(
 }
 
 function is_valid_image(file_name: string): boolean {
-  const path = '../assets/full/' + file_name + '.jpg';
+  const path = 'assets/full/' + file_name + '.jpg';
   if (fs.existsSync(path)) {
     return true;
   }
