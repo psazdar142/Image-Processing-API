@@ -6,11 +6,11 @@ import fs from 'fs';
 const app = express();
 const port = 3000;
 
-app.get('/', logger, async (req, res) => {
+app.get('/', logger, async (req, res): Promise<void> => {
   res.status(200).send('Welcome to the Image Processing API');
 });
 
-app.get('/image_processing', logger, async (req, res) => {
+app.get('/image_processing', logger, async (req, res): Promise<void> => {
   try {
     const file_name: string = String(req.query.file_name); // eslint-disable-line
     const width: string = String(req.query.width); // eslint-disable-line
